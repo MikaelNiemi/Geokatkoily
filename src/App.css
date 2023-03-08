@@ -42,3 +42,7 @@
   margin: 10px;
   white-space: pre-line;
  }
+
+ .greentext {
+  color: green;
+ }

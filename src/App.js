@@ -6,9 +6,9 @@ import {Button} from '@mui/material';
 
 function App() {
     const [kysymykset, setKysymykset] = useState(0);
-    const [vastausN, setVastausN] = useState(0);
-    const [vastausW, setVastausW] = useState(0);
-    const [vastausJono, setVastausJono] = useState(0);
+    const [vastausN, setVastausN] = useState("");
+    const [vastausW, setVastausW] = useState("");
+    const [vastausJono, setVastausJono] = useState("");
     const [vastaukset, setVastaukset] = useState(0);
     const [i, setI] = useState(0);
     
@@ -89,15 +89,15 @@ function App() {
 
         switch(vastaukset) {
             case 0:
-                latVastaus = 10;
-                lonVastaus = 10;
-                oikeaVastaus = 60;
+                latVastaus = "60 59.615";
+                lonVastaus = "022 20.182";
+                oikeaVastaus = "60 59.615 022 20.182";
             break;
 
             case 1:
-                latVastaus = 10;
-                lonVastaus = 10;
-                oikeaVastaus = 16;
+                latVastaus = "61 30.920";
+                lonVastaus = "021 44.652";
+                oikeaVastaus ="61 30.920 021 44.652";
             break;
 
             case 2:
@@ -105,15 +105,15 @@ function App() {
             break;
 
             case 3:
-                latVastaus = 10;
-                lonVastaus = 10;
-                oikeaVastaus = 44;
+                latVastaus = "60 59.312";
+                lonVastaus = "022 30.132";
+                oikeaVastaus = "60 59.312 022 30.132";
             break;
 
             case 4:
-                latVastaus = 10;
-                lonVastaus = 10;
-                oikeaVastaus = 51;
+                latVastaus = "60 22.691";
+                lonVastaus = "022 33.240";
+                oikeaVastaus = "60 22.691 022 33.240";
             break;
         }
 
@@ -124,7 +124,12 @@ function App() {
 
             <form>
                 {FormPalkki()}
-                <Button onClick={() => KysymyksetEteenpain()}>Primary</Button>
+                <Button onClick={() => {
+                    KysymyksetEteenpain();
+                    setVastausN("");
+                    setVastausW("");
+                    setVastausJono("");
+                    }}>Primary</Button>
             </form>
         </div>
     );
