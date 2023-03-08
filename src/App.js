@@ -9,21 +9,22 @@ function App() {
     const [vastausN, setVastausN] = useState(0);
     const [vastausW, setVastausW] = useState(0);
     const [vastausJono, setVastausJono] = useState(0);
-    const [vastausJonoTeksti, setVastausJonoTeksti] = useState("");
     const [vastaukset, setVastaukset] = useState(0);
     const [i, setI] = useState(0);
     
     let a = i;
     let oikeaVastaus = 0;
+    let latVastaus = 0;
+    let lonVastaus = 0;
 
     const FormPalkki = () => {
-        if (a === 2) {
+        if (a == 2) {
             return (
                 <div>
                     <input 
                     type="text" 
-                    value={vastausJonoTeksti} 
-                    onChange={e => setVastausJonoTeksti(e.target.value)}></input>
+                    value={vastausJono}
+                    onChange={e => setVastausJono(e.target.value)}></input>
                 </div>
             );
         } else {
@@ -36,7 +37,7 @@ function App() {
                                 <option selected value="North">N</option>
                                 <option value="South">S</option>
                             </select>
-                            <input type="number" 
+                            <input type="text" 
                             value={vastausN} 
                             onChange={e => setVastausN(e.target.value)}></input>
                         </label>
@@ -48,7 +49,7 @@ function App() {
                                 <option selected value="East">E</option>
                                 <option value="West">W</option>
                             </select>
-                            <input type="number" 
+                            <input type="text" 
                             value={vastausW} 
                             onChange={e => setVastausW(e.target.value)}></input>
                         </label>
@@ -56,7 +57,7 @@ function App() {
                     <div>
                         <label>
                             Tai naatit jonona:
-                            <input name="naattiJono" type="number"
+                            <input name="naattiJono" type="text"
                             value={vastausJono} 
                             onChange={e => setVastausJono(e.target.value)}></input>
                         </label>
@@ -67,7 +68,14 @@ function App() {
     }
 
     const KysymyksetEteenpain = () => {
-            if (vastausJono || vastausJonoTeksti == oikeaVastaus) {
+            if (vastausJono == oikeaVastaus) {
+                    
+                    a++;
+                    setI(a);
+                    console.log(a);
+                    setKysymykset(a);
+                    setVastaukset(a);
+            } else if (vastausN == latVastaus && vastausW == lonVastaus) {
                     
                     a++;
                     setI(a);
@@ -81,10 +89,14 @@ function App() {
 
         switch(vastaukset) {
             case 0:
+                latVastaus = 10;
+                lonVastaus = 10;
                 oikeaVastaus = 60;
             break;
 
             case 1:
+                latVastaus = 10;
+                lonVastaus = 10;
                 oikeaVastaus = 16;
             break;
 
@@ -93,10 +105,14 @@ function App() {
             break;
 
             case 3:
+                latVastaus = 10;
+                lonVastaus = 10;
                 oikeaVastaus = 44;
             break;
 
             case 4:
+                latVastaus = 10;
+                lonVastaus = 10;
                 oikeaVastaus = 51;
             break;
         }
