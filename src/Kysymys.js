@@ -13,7 +13,7 @@ function Kysymys({KysymyksetEteenpain}) {
                 <div>
                     <h1>1.	Laulu 20 perheestä</h1>
                     <p>Koordinaatit ovat muotoa:</p>
-                    <h2>60° XX.XXX 022° XX.XXX</h2>
+                    <h2>60 XX.XXX 022 XX.XXX</h2>
                     <p>Matti oli elämässään tavannut 20 upeata perhettä. Hän päätti tehdä heistä laulun. Rosenlewin perhe oli todella säkenöivä ja heidän kanssaan Matilla oli ollut aina hauskaa. Wasastjernan perheessä oli äiti, isä ja kaksi vallatonta lasta. Lapsien kanssa sattui ja tapahtui. Matilla ei ollut omia lapsia, joten heidän vilkkautensa ei häntä haitannut. Päinvastoin, hänestä oli hauska seurata lasten kommelluksia. Frenckell-perhe oli vielä hieman vieras. He olivat vielä tutustumisvaiheessa. Perheen isä oli klovni ja Matti kävi hänen esityksiään katsomassa aina kun voi. Björnbergit hän on tuntenut jo lapsesta asti. Heidän perheen äiti ja isä olivat hänen lapsuudenkavereitaan. Perhe oli hänelle kaikkein läheisin. Serlachiukset olivat muuttaneet ulkomailta ja heillä oli aina mukavia kertomuksia Afrikan viidakosta. Serlachius oli hyvin harvinainen nimi ja Matilla oli vaikeuksia ääntää nimi oikein. Virkkusten isä oli nimensä mukainen virkkunen. Isä heräsi kukonlaulun aikaan joka aamu. Onneksi hän ei silti soitellut Matille siihen aikoihin. Matti tykkäsi nukkua pitkään. Kaikkien nimiä ei tässä kohtaa nyt mainita. Viimeisin perhe pitää vielä mainita, sillä Waldenin perheen tytär menee naimisiin Matin siskonpojan kanssa. Se on Matille tärkeä asia, sillä siskonpoika on hänen kummipoikansa. Hän sisällyttää senkin asian lauluunsa. Laulu julkaistaan helmikuussa 2030. </p>
                     <p>Mutta miten ne koordinaatit, mistäs ne syntyikään…</p>
                 </div>
@@ -49,8 +49,8 @@ function Kysymys({KysymyksetEteenpain}) {
                 <div>
                     <h1>4.	Hyppääjien unelma 1988</h1>
                     <p>Koordinaatit ovat muotoa</p>
-                    <h2>60° 59.ABC</h2>
-                    <h2>022° 30.DEF</h2>
+                    <h2>60 59.ABC</h2>
+                    <h2>022 30.DEF</h2>
                     <p>Selvitä alla olevien kuvien avulla A-F merkitys. Kaikki on suurta ja normaalia.</p>
                     <p>A)</p><img src={Kuva1}/>
                     <p>B)</p><img src={Kuva2}/>
@@ -66,8 +66,8 @@ function Kysymys({KysymyksetEteenpain}) {
                 <div>
                     <h1>5.	Runo Ystävälle</h1>
                     <p>Koordinaatit ovat muotoa:</p>
-                    <h2>60° 22.XXX 022° 33.XXX</h2>
-                    <p className='greentext'>&lt;!--/Minuns ystävänii on kuin villasukkax, hän pitääy, minuts, lämpiimänä. Minun yystäväni on kkuin villassukkai, hänn on peehmeä jja mukavaä. Minun ystäväni on kkuin villaasukkax, hänn oon ihlana ja tärkeä!/--&gt;</p>
+                    <h2>60 22.XXX 022 33.XXX</h2>
+                    <p className='greentext'>&lt;!--/Minuns ystävänii on kuin villasukkax, hän pitääy, minuts, lämpiimänä. Minun yystäväni on kkuin villassukkai, hänn on peehmeä jja mulkavaä. Minun ystäväni on kkuin villaasukkax, hänn oon ihlana ja tärkeä!/--&gt;</p>
                 </div>
             )
     }

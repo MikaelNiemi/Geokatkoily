@@ -1,7 +1,7 @@
 import './App.css';
 import Kysymys from './Kysymys';
 import {useState} from 'react';
-import {Button} from '@mui/material';
+import {Alert, Button} from '@mui/material';
 
 
 function App() {
@@ -16,6 +16,10 @@ function App() {
     let oikeaVastaus = 0;
     let latVastaus = 0;
     let lonVastaus = 0;
+
+    function showAlert() {
+        alert ("väärä vastaus");
+    }
 
     const FormPalkki = () => {
         if (a == 2) {
@@ -82,6 +86,8 @@ function App() {
                     console.log(a);
                     setKysymykset(a);
                     setVastaukset(a);
+            } else {
+                showAlert();
             }
         }
 
@@ -113,7 +119,7 @@ function App() {
             case 4:
                 latVastaus = "60 22.691";
                 lonVastaus = "022 33.240";
-                oikeaVastaus = "60 22.691 022 33.240";
+                oikeaVastaus = "60 22.691 022 33.420";
             break;
         }
 
@@ -129,7 +135,7 @@ function App() {
                     setVastausN("");
                     setVastausW("");
                     setVastausJono("");
-                    }}>Primary</Button>
+                    }}>Tarkista</Button>
             </form>
         </div>
     );
