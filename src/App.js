@@ -16,13 +16,14 @@ function App() {
     let oikeaVastaus = 0;
     let latVastaus = 0;
     let lonVastaus = 0;
+    let oikeaVastaus2 = "";
 
     function showAlert() {
         alert ("väärä vastaus");
     }
 
     const FormPalkki = () => {
-        if (a == 2) {
+        if (a === 2) {
             return (
                 <div>
                     <input 
@@ -72,14 +73,14 @@ function App() {
     }
 
     const KysymyksetEteenpain = () => {
-            if (vastausJono == oikeaVastaus) {
+            if (vastausJono === oikeaVastaus) {
                     
                     a++;
                     setI(a);
                     console.log(a);
                     setKysymykset(a);
                     setVastaukset(a);
-            } else if (vastausN == latVastaus && vastausW == lonVastaus) {
+            } else if (vastausN === latVastaus && vastausW === lonVastaus) {
                     
                     a++;
                     setI(a);
@@ -118,7 +119,7 @@ function App() {
 
             case 4:
                 latVastaus = "60 22.691";
-                lonVastaus = "022 33.240";
+                lonVastaus = "022 33.420";
                 oikeaVastaus = "60 22.691 022 33.420";
             break;
         }
